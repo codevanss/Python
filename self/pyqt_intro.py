@@ -32,8 +32,6 @@ class MainWindow(QMainWindow):
                           label.height())
 
 
-
-
 def main():
    app = QApplication(sys.argv)
    window = MainWindow()
