@@ -1,9 +1,20 @@
-s1 = "here-come-the-dots-followed-by-dashes"
-def convert(x):
-    s = [x for x in s1.split('-')]
-    print(s)
-    b = s.sort()
-    d = '-'.join(s)
-    print(d)
+d1 = {'a' : 1 , 'b' : 2}
+d2 = {'c' : 3 , 'd' : 4}
+d3 = {}
+tpl = (d1,d2,d3)
+for i in tpl:
+    if(i):
+        print('Not Empty')
+    else:
+        print("Empty")
 
-a = convert(s1)
+if bool(d3):
+    print("true")
+else:
+    print("false")
+
+d1 = {'a' : 1 , 'b' : 2}
+d2 = {'c' : 3 , 'd' : 4}
+
+d3 = {**d1 , **d2}
+print(d3)
