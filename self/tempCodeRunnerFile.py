@@ -1,6 +1,10 @@
+rows = 5
+for i in range(0, rows):
+    for j in range(0, i + 1):
+        print("*", end=' ')
+    print("\r")
 
-with open("self/output.txt", "r") as fp:
-    # read all lines from a file
-    lines = fp.readlines()
-    # get line number 4
-    print(lines[3])
+for i in range(rows, 0, -1):
+    for j in range(0, i - 1):
+        print("*", end=' ')
+    print("\r")
