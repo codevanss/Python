@@ -64,4 +64,50 @@ class LinkedList:
             curr.next = new_node
             self.n = self.n+1
         else:
-            return "Item Not Found"  
+            return "Item Not Found"
+    
+    def clear(self):
+        self.head = None
+        self.n = 0
+    
+    def del_head(self):
+        if self.head == None:
+            return "Empty Linked List"
+        self.head = self.head.next
+        self.n = self.n-1
+    
+    def pop(self):
+        if self.head == None:
+            return "Empty Linked List"
+        curr = self.head
+        if curr.next == None:
+            return self.del_head()
+        while curr.next.next != None:
+            curr = curr.next
+        curr.next = None
+        self.n = self.n-1
+    
+    def remove(self,value):
+        if self.head == None:
+            return "Empty Linked List"
+        if self.head.data == value:
+            return self.del_head()
+
+        curr = self.head
+
+        
+
+        while curr.next != None:
+            if curr.next.data == value:
+                break
+            curr = curr.next
+        
+        if curr.next == None:
+            return "Not found"
+        else:
+            curr.next = curr.next.next
+        self.n = self.n-1
+
+
+
+    
