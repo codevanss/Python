@@ -24,18 +24,20 @@
 # print(calculate(10,20))
 
 
-# def my_decorator(func):
-#     def wrapper(*args , **kwargs):
-#         print("hello world")
-#         res = func(*args , **kwargs)
-#         if res is not None:
-#             print(res)
-#         print("bye bye")
-#     return wrapper
+def my_decorator(func):
+    def wrapper(*args , **kwargs):
+        print("hello world")
+        res = func(*args , **kwargs)
+        if res is not None:
+            print(res)
+        print("bye bye")
+    return wrapper
 
-# @my_decorator
-# def my_function():
-#     print("We are running")
+@my_decorator
+def my_function():
+    print("We are running")
+
+my_function()
 
 # @my_decorator
 # def calculate(x,y):
@@ -67,22 +69,22 @@
 
 # sum(numbers)
 
-import time
+# import time
 
-def timer(func):
-    def wrapper(p_time):
-        start = time.time()
-        print("Start")
-        func(p_time)
-        total = time.time()- start
-        print("Done" , total)
-    return wrapper
+# def timer(func):
+#     def wrapper(p_time):
+#         start = time.time()
+#         print("Start")
+#         func(p_time)
+#         total = time.time()- start
+#         print("Done" , total)
+#     return wrapper
 
-@timer
-def do_something(pause):
-    time.sleep(pause)
-    print("Hello World")
+# @timer
+# def do_something(pause):
+#     time.sleep(pause)
+#     print("Hello World")
 
-do_something(1)
-do_something(5)
-do_something(3)
+# do_something(1)
+# do_something(5)
+# do_something(3)

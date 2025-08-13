@@ -1,16 +1,14 @@
-list1 = [3, 6, 9, 12, 15, 18, 21]
-list2 = [4, 8, 12, 16, 20, 24, 28]
-res = list()
+def my_decorator(func):
+    def wrapper(*args , **kwargs):
+        print("hello world")
+        res = func(*args , **kwargs)
+        if res is not None:
+            print(res)
+        print("bye bye")
+    return wrapper
 
-odd_elements = list1[1::2]
-print("Element at odd-index positions from list one")
-print(odd_elements)
+@my_decorator
+def my_function():
+    print("We are running")
 
-even_elements = list2[0::2]
-print("Element at even-index positions from list two")
-print(even_elements)
-
-print("Printing Final third list")
-res.extend(odd_elements)
-res.extend(even_elements)
-print(res)
+my_function()

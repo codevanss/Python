@@ -12,4 +12,4 @@ def generateOTP() :
 
 if __name__ == "__main__" :
 	
-	print("OTP of 4 digits:", generateOTP())
+	print("OTP of 6 digits:", generateOTP())
