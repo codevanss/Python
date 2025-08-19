@@ -93,11 +93,142 @@
 #  print(f"Root 2: {real_part} - {imaginary_part}i")
 
 # Q10 Write a Python program to swap two variables without temp variable.
-a = 10 
-b = 15
+# a = 10 
+# b = 15
 
-a = a ^ b
-b = a ^ b
-a = a ^ b
+# a = a ^ b
+# b = a ^ b
+# a = a ^ b
 
-print(f"The value of a is {a} and b is {b}")
+# print(f"The value of a is {a} and b is {b}")
+
+# Q11 Write a Python Program to Check if a Number is Positive, Negative or Zero.
+# num = float(input("Enter a num to check whether its a positive,negative or zero:- "))
+# if num==0:
+#     print("The number you enter is 0")
+# elif num>0:
+#     print("The number you enter is positive")
+# else:
+#     print("The number you enter is negative")
+
+# Q12 Write a Python Program to Check if a Number is Odd or Even.
+# num = float(input("Enter a num to check whether its a even or a odd:- "))
+
+# if num%2==0:
+#     print("The number you enter is even")
+# else:
+#     print("The number you enter is odd")
+
+# Q13Write a Python Program to Check Leap Year.
+# year = int(input("Enter a to check whether its a leap year or not:- "))
+
+# if (year%400==0) and (year%100==0):
+#     print(f"{year} is a leap year")
+
+# elif (year%4==0) and (year%100 != 0):
+#     print(f"{year} is a leap year")
+
+# else: 
+#     print("Not a leap year")
+
+# Q14 Write a Python Program to Check Prime Number
+# num = int(input("Enter a number: "))
+# # define a flag variable
+# flag = False
+# if num == 1:
+#  print(f"{num}, is not a prime number")
+# elif num > 1:
+#  # check for factors
+#     for i in range(2, num):
+#         if (num % i) == 0:
+#             flag = True # if factor is found, set flag to True
+#             # break out of loop
+#             break
+# # check if flag is True
+# if flag:
+#     print(f"{num}, is not a prime number")
+# else:
+#     print(f"{num}, is a prime number")
+
+# Q15 Write a Python Program to Print all Prime Numbers in an Interval of 1-10.
+# lower = 1
+# upper = 10
+# print("Prime numbers between", lower, "and", upper, "are:")
+# for num in range(lower, upper + 1):
+#  # all prime numbers are greater than 1
+#     if num > 1:
+#         for i in range(2, num):
+#             if (num % i) == 0:
+#                 break
+#             else:
+#                 print(num)
+
+# Q16 Write a Python Program to Find the Factorial of a Number
+# def fact(num):
+#     if num == 1:
+#         return 1
+#     return num*fact(num-1)
+
+# print(fact(5))
+
+# Q17 Write a Python Program to Display the multiplication Table.
+# num = int(input("Enter a number you want a multiplication table:- "))
+
+# for i in range(1,11):
+#     print(num*i)
+
+# Q18 Write a Python Program to Print the Fibonacci sequence
+# n1 = 0
+# n2 = 1
+# count = 0
+# nterms = int(input("Enter how many number of series you want:- "))
+
+# if nterms <= 0:
+#     print("Please enter a positive integer")
+# elif nterms ==1:
+#     print("Fibonacci Series upto " , nterms ," :-")
+#     print(n1)    
+# else:
+#     while count<nterms:
+#         print(n1)
+#         nth = n1 + n2
+#         # update values
+#         n1 = n2
+#         n2 = nth
+#         count +=1
+
+# Q19 Write a Python Program to Check Armstrong Number?
+# num = int(input("Enter a number: "))
+# # Calculate the number of digits in num
+# num_str = str(num)
+# num_digits = len(num_str)
+# # Initialize variables
+# sum_of_powers = 0
+# temp_num = num
+# # Calculate the sum of digits raised to the power of num_digits
+# while temp_num > 0:
+#     digit = temp_num % 10
+#     sum_of_powers += digit ** num_digits
+#     temp_num //= 10
+# # Check if it's an Armstrong number
+# if sum_of_powers == num:
+#  print(f"{num} is an Armstrong number.")
+# else:
+#  print(f"{num} is not an Armstrong number.")
+
+# Q20 Write a Python Program to Find Armstrong Number in an Interval.
+# Input the interval from the user
+lower = int(input("Enter the lower limit of the interval: "))
+upper = int(input("Enter the upper limit of the interval: "))
+for num in range(lower, upper + 1): # Iterate through the numbers i
+    order = len(str(num)) # Find the number of digits in 'num'
+    temp_num = num
+    sum = 0
+    while temp_num > 0:
+        digit = temp_num % 10
+        sum += digit ** order
+        temp_num //= 10
+ # Check if 'num' is an Armstrong number
+    if num == sum:
+        print(num)
+
