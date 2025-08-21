@@ -218,17 +218,370 @@
 
 # Q20 Write a Python Program to Find Armstrong Number in an Interval.
 # Input the interval from the user
-lower = int(input("Enter the lower limit of the interval: "))
-upper = int(input("Enter the upper limit of the interval: "))
-for num in range(lower, upper + 1): # Iterate through the numbers i
-    order = len(str(num)) # Find the number of digits in 'num'
-    temp_num = num
-    sum = 0
-    while temp_num > 0:
-        digit = temp_num % 10
-        sum += digit ** order
-        temp_num //= 10
- # Check if 'num' is an Armstrong number
-    if num == sum:
-        print(num)
+# lower = int(input("Enter the lower limit of the interval: "))
+# upper = int(input("Enter the upper limit of the interval: "))
+# for num in range(lower, upper + 1): # Iterate through the numbers i
+#     order = len(str(num)) # Find the number of digits in 'num'
+#     temp_num = num
+#     sum = 0
+#     while temp_num > 0:
+#         digit = temp_num % 10
+#         sum += digit ** order
+#         temp_num //= 10
+#  # Check if 'num' is an Armstrong number
+#     if num == sum:
+#         print(num)
 
+# Q21 Write a Python Program to Find the Sum of Natural Numbers
+
+# num = int(input("Enter the number you want to sum :-  "))
+
+# sum=0
+
+# while num!=0:
+#     digit = num % 10
+#     sum += digit
+#     num//=10
+
+# print(sum)
+
+# Q22 Write a Python Program to Find LCM
+# def compute_lcm(x, y):
+#     if x > y: # choose the greater number
+#         greater = x
+#     else:
+#         greater = y
+#     while(True):
+#         if((greater % x == 0) and (greater % y == 0)):
+#             lcm = greater
+#             break
+#             greater += 1
+#     return lcm
+# num1 = int(input('Enter the number: '))
+# num2 = int(input('Enter the number: '))
+# print("The L.C.M. is", compute_lcm(num1, num2))
+
+# Q23 Write a Python Program to Find HCF
+# def compute_hcf(x, y):
+#     if x > y:
+#         smaller = y
+#     else:   
+#         smaller = x
+#     for i in range(1, smaller+1):
+#         if((x % i == 0) and (y % i == 0)):
+#             hcf = i
+#     return hcf
+# num1 = int(input('Enter the number: '))
+# num2 = int(input('Enter the number: '))
+# print("The H.C.F. is", compute_hcf(num1, num2))
+
+# Q24 Write a Python Program to Convert Decimal to Binary, Octal and Hexadecimal
+# num = int(input("Enter the number you want to convert:-  "))
+
+# print(bin(num))
+# print(oct(num))
+# print(hex(num))
+
+# Q25 Write a Python Program To Find ASCII value of a character
+# char = str(input("Enter the character: "))
+# print("The ASCII value of '" + char + "' is", ord(char))
+
+# Q26 Write a Python Program to Make a Simple Calculator with 4 basic mathematical operations
+
+# def add(x,y):
+#     return x+y
+
+# def sub(x,y):
+#     return x-y
+    
+# def mul(x,y):
+#     return x*y
+
+# def div(x,y):
+#     return x/y
+
+# num1 = int(input("Enter the first number:- "))
+# num2 = int(input("Enter the second number:- "))
+
+# print("Select operation.")
+# print("1.Add")
+# print("2.Subtract")
+# print("3.Multiply")
+# print("4.Divide")
+
+# while True:
+#     choice = input("Enter choice(1/2/3/4): ")
+
+#     if choice in ('1','2','3','4'):
+
+#         if choice == "1":
+#             print("The result after addition " , add(num1,num2))
+        
+#         elif choice == "2":
+#             print("The result after subtraction " , sub(num1,num2))
+        
+#         elif choice == "3":
+#             print("The result after multiplication " , mul(num1,num2))
+        
+#         elif choice == "4":
+#             print("The result after division " , div(num1,num2))
+        
+#         else:
+#             print("Invalid choice")
+        
+
+#         next_calculation = input("Let's do next calculation? (yes/no):")
+#         if next_calculation.lower() == "no":
+#             break
+#         else:   
+#             print("Invalid Input")
+
+# Q27 Write a Python Program to Display Fibonacci Sequence Using Recursion
+# def recur_fibo(n):
+#     if n <= 1:
+#         return n
+#     else:
+#         return(recur_fibo(n-1) + recur_fibo(n-2))
+# nterms = int(input("Enter the number of terms (greater than 0): "))
+# # check if the number of terms is valid
+# if nterms <= 0:
+#  print("Plese enter a positive integer")
+# else:
+#  print("Fibonacci sequence:")
+#  for i in range(nterms):
+#     print(recur_fibo(i))
+
+# Q28 Write a Python Program to Find Factorial of Number Using Recursion
+
+# def fact(x):
+#     if x == 0:
+#         return 1
+#     else:
+#         return x*fact(x-1)
+
+# num = int(input("Enter the number for factorial :- "))
+
+# print(f"The fact of {num} is {fact(num)}")
+
+# Q29 Write a Python Program to calculate your Body Mass Index.
+# def bodymassindex(height, weight):
+#  return round((weight / height**2),2)
+
+
+# h = float(input("Enter your height in meters: "))
+# w = float(input("Enter your weight in kg: "))
+
+# print("Welcome to the BMI calculator.")
+
+# bmi = bodymassindex(h, w)
+# print("Your BMI is: ", bmi)
+
+
+# if bmi <= 18.5:
+#     print("You are underweight.")
+# elif 18.5 < bmi <= 24.9:
+#     print("Your weight is normal.")
+# elif 25 < bmi <= 29.29:
+#     print("You are overweight.")
+# else:
+#     print("You are obese.")
+
+# Q30 Write a Python Program to calculate the natural logarithm of any number.
+# import math
+
+# num = float(input("Enter the number :-"))
+
+# if num <=0:
+#     print("Please enter positive number.")
+# else:
+#     result = math.log(num)
+#     print("The value of number into logarithm is " , result)
+
+# Q31 Write a Python Program for cube sum of first n natural numbers?
+# n= int(input("Enter the number you want sum of their cube :- "))
+# total = sum([i**3 for i in range(1,n+1)])
+# print(total)
+
+# Q32 Write a Python Program to find sum of array
+
+# arr = [1,2,3,4,5]
+
+# total = 0 
+# for i in arr:
+#     total +=i
+# print(total)
+
+# Q33 Write a Python Program to find largest element in an array.
+# arr = [1,2,3,4,55 ,34, 456,467,4,24324465,5474,321,3]
+# print(max(arr))
+
+# maxelement = 0 
+
+# for i in arr :
+#     if i > maxelement:
+#         maxelement = i
+    
+# print(maxelement)
+
+# Q34 Write a Python Program for array rotation
+# def rotate_array(arr, d):
+#     n = len(arr)
+
+#  # Check if 'd' is valid, it should be within the range of array len
+#     if d < 0 or d >= n:
+#         return "Invalid rotation value"
+
+#  # Create a new array to store the rotated elements.
+#     rotated_arr = [0] * n
+
+#  # Perform the rotation.
+#     for i in range(n):
+#         rotated_arr[i] = arr[(i + d) % n]
+
+#     return rotated_arr
+# # Input array
+# arr = [1, 2, 3, 4, 5]
+# # Number of positions to rotate
+# d = 2
+# # Call the rotate_array function
+# result = rotate_array(arr, d)
+# # Print the rotated array
+# print("Original Array:", arr)
+# print("Rotated Array:", result)
+
+# Q35 Write a Python Program to Split the array and add the first part to the end?
+
+# def split_and_add(arr, k):
+#     if k <= 0 or k >= len(arr):
+#         return arr
+#  # Split the array into two parts
+#     first_part = arr[:k]
+#     second_part = arr[k:]
+#  # Add the first part to the end of the second part
+#     result = second_part + first_part
+#     return result
+# # Test the function
+# arr = [1, 2, 3, 4, 5]
+# k = 3
+# result = split_and_add(arr, k)
+# print("Original Array:", arr)
+# print("Array after splitting and adding:", result)
+
+# Q36 Write a Python Program to check if given array is Monotonic
+# def is_monotonic(arr):
+#     increasing = decreasing = True
+#     for i in range(1, len(arr)):
+#         if arr[i] > arr[i - 1]:
+#             decreasing = False
+#         elif arr[i] < arr[i - 1]:
+#             increasing = False
+#     return increasing or decreasing
+# # Test the function
+# arr1 = [1, 2, 2, 3] # Monotonic (non-decreasing)
+# arr2 = [3, 2, 1] # Monotonic (non-increasing)
+# arr3 = [1, 3, 2, 4] # Not monotonic
+# print("arr1 is monotonic:", is_monotonic(arr1))
+# print("arr2 is monotonic:", is_monotonic(arr2))
+# print("arr3 is monotonic:", is_monotonic(arr3))
+
+# Q37 Add two Matrices
+# def add_matrices(mat1, mat2):
+#  # Check if the matrices have the same dimensions
+#  if len(mat1) != len(mat2) or len(mat1[0]) != len(mat2[0]):
+#     return "Matrices must have the same dimensions for addition"
+
+#  # Initialize an empty result matrix with the same dimensions
+#  result = []
+#  for i in range(len(mat1)):
+#     row = []
+#     for j in range(len(mat1[0])):
+#         row.append(mat1[i][j] + mat2[i][j])
+#         result.append(row)
+
+#  return result
+# # Input matrices
+# matrix1 = [
+#  [1, 2, 3],
+#  [4, 5, 6],
+#  [7, 8, 9]
+# ]
+# matrix2 = [
+#  [9, 8, 7],
+#  [6, 5, 4],
+#  [3, 2, 1]
+# ]
+# # Call the add_matrices function
+# result_matrix = add_matrices(matrix1, matrix2)
+# # Display the result
+# if isinstance(result_matrix, str):
+#  print(result_matrix)
+# else:
+#  print("Sum of matrices:")
+#  for row in result_matrix:
+#     print(row)
+
+# Q38 Write a Python Program to Multiply Two Matrices.
+# def multiply_matrices(mat1, mat2):
+#     # Determine the dimensions of the input matrices
+#     rows1 = len(mat1)
+#     cols1 = len(mat1[0])
+#     rows2 = len(mat2)
+#     cols2 = len(mat2[0])
+#  # Check if multiplication is possible
+#     if cols1 != rows2:
+#         return "Matrix multiplication is not possible. Number of column"
+#  # Initialize the result matrix with zeros
+#     result = [[0 for _ in range(cols2)] for _ in range(rows1)]
+#  # Perform matrix multiplication
+#     for i in range(rows1):
+#         for j in range(cols2):
+#             for k in range(cols1):
+#                 result[i][j] += mat1[i][k] * mat2[k][j]
+#     return result
+# # Example matrices
+# matrix1 = [[1, 2, 3],
+#             [4, 5, 6]]
+# matrix2 = [[7, 8],
+#             [9, 10],
+#             [11, 12]]
+# # Multiply the matrices
+# result_matrix = multiply_matrices(matrix1, matrix2)
+# # Display the result
+# if isinstance(result_matrix, str):
+#  print(result_matrix)
+# else:
+#  print("Result of matrix multiplication:")
+#  for row in result_matrix:
+#     print(row)
+
+# Q39 Write a Python Program to Transpose a Matrix.
+
+# def transpose_matrix(matrix):
+#     rows, cols = len(matrix), len(matrix[0])
+#  # Create an empty matrix to store the transposed data
+#     result = [[0 for _ in range(rows)] for _ in range(cols)]
+#     for i in range(rows):
+#         for j in range(cols):
+#             result[j][i] = matrix[i][j]
+#     return result
+# # Input matrix
+# matrix = [
+#  [1, 2, 3],
+#  [4, 5, 6]
+# ]
+# # Transpose the matrix
+# transposed_matrix = transpose_matrix(matrix)
+# # Print the transposed matrix
+# for row in transposed_matrix:
+#  print(row)
+
+# Q40 Write a Python Program to Sort Words in Alphabetic Order
+my_str = input("Enter a string: ")
+# breakdown the string into a list of words
+words = [word.capitalize() for word in my_str.split()]
+# sort the list
+words.sort()
+# display the sorted words
+print("The sorted words are:")
+for word in words:
+ print(word)
