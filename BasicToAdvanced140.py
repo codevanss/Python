@@ -576,12 +576,130 @@
 #  print(row)
 
 # Q40 Write a Python Program to Sort Words in Alphabetic Order
-my_str = input("Enter a string: ")
-# breakdown the string into a list of words
-words = [word.capitalize() for word in my_str.split()]
-# sort the list
-words.sort()
-# display the sorted words
-print("The sorted words are:")
-for word in words:
- print(word)
+# my_str = input("Enter a string: ")
+# # breakdown the string into a list of words
+# words = [word.capitalize() for word in my_str.split()]
+# # sort the list
+# words.sort()
+# # display the sorted words
+# print("The sorted words are:")
+# for word in words:
+#  print(word)
+
+# Q41 Write a Python Program to Remove Punctuation From a String
+# punctuations = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+# my_str = input("Enter a string :- ")
+# str_without_punc = " "
+
+# for i in punctuations:
+#     if i not in punctuations:
+#         str_without_punc += i
+# print(str_without_punc)
+
+# Q42 -----MISSING-----
+
+
+# Q43 Write a Python program to check if the given number is a Disarium Number.
+# def is_disarium(numbers):
+#     num_str  = str(numbers)
+
+#     digit_sum = sum(int(i)**(index+1) for index , i in enumerate(numbers))
+
+#     return digit_sum == numbers
+# try:
+#     num = int(input("Enter a number: "))
+#  # Check if it's a Disarium number
+#     if is_disarium(num):
+#         print(f"{num} is a Disarium number.")
+#     else:
+#         print(f"{num} is not a Disarium number.")
+# except ValueError:
+#     print("Invalid input. Please enter a valid number.")
+
+# Q44 Write a Python program to print all disarium numbers between 1 to 100. 
+
+# disarium = []
+# for i in range(1,100):
+#     num_str = str(i)
+#     digit_sum = sum(int(n)**(index+1) for index , n in enumerate(num_str))
+#     if digit_sum == i:
+#         disarium.append(i)
+# print(disarium)
+
+# Q45 Write a Python program to check if the given number is Happy Number.
+
+# def is_happy(num):
+
+#     seen = set()
+
+#     while num != 1 and num not in seen:
+#         seen.add(num)
+#         num  = sum(int(i)**2 for i in str(num))
+    
+#     return num ==1
+
+# num = int(input("Enter a number"))
+# if is_happy(num):
+#     print(f"{num} is a happy number")
+# else:
+#      print(f"{num} is  not a happy number")
+
+# Q46 Write a Python program to print all happy numbers between 1 and 100
+# def is_happy(num):
+#     seen = set()
+#     while num != 1 and num not in seen:
+#         seen.add(num)
+#        num  = sum(int(i)**2 for i in str(num))
+#     return num ==1
+
+# happy_numbers = []
+
+# for i in range(1,101):
+#     if is_happy(i):
+#         happy_numbers.append(i)
+# print(happy_numbers)
+ 
+# Q47 Write a Python program to determine whether the given number is a Harshad Number.
+
+# def harshad_number(num):
+#     original_num = num
+#     sum_digit = 0
+#     while num > 0:
+#         digit = num % 10
+#         sum_digit += digit
+#         num = num // 10
+    
+#     if original_num % sum_digit== 0:
+#         print(f"{original_num} is a harshad number")
+#     else:
+#         print(f"{original_num} is not a harshad number")
+
+# harshad_number(18)
+
+# Q48 Write a Python program to print all pronic numbers between 1 and 100.
+# def is_pronic(num):
+#     # check if num can be written as n*(n+1)
+#     for n in range(num+1):
+#         if n * (n+1) == num:
+#             return True
+#     return False
+
+# print("Pronic numbers between 1 and 100 are:")
+# for i in range(1, 101):
+#     if is_pronic(i):
+#         print(i, end=" ")
+
+# Q49 Write a python program to find sum of element of list
+
+# numbers = [1,2,3,4,5,6,7,8,9,10]
+
+# total = sum(num for num in numbers)
+# print(total)
+
+# Q50 Write a Python program to Multiply all numbers in the list.
+# import math
+# numbers = [1,2,3,4,5]
+
+# product = math.prod(num for num in numbers)
+# print(product)
