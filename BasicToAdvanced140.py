@@ -597,7 +597,32 @@
 #         str_without_punc += i
 # print(str_without_punc)
 
-# Q42 -----MISSING-----
+# Q42 Sorting withour in built function
+# def bubble_sort(arr):
+#     n = len(arr)
+#     # Traverse through all elements
+#     for i in range(n):
+#         # Last i elements are already in place
+#         for j in range(0, n-i-1):
+#             # Swap if element found is greater than next element
+#             if arr[j] > arr[j+1]:
+#                 arr[j], arr[j+1] = arr[j+1], arr[j]
+#     return arr
+
+# # Test
+# list1 = [64, 25, 12, 22, 11]
+# print("Original List:", list1)
+# print("Sorted List:", bubble_sort(list1))
+
+# # List: [64, 25, 12, 22, 11]
+
+# # Pass 1 → [25, 12, 22, 11, 64] (64 bubbled to the end)
+
+# # Pass 2 → [12, 22, 11, 25, 64]
+
+# # Pass 3 → [12, 11, 22, 25, 64]
+
+# # Pass 4 → [11, 12, 22, 25, 64] ✅ Sorted
 
 
 # Q43 Write a Python program to check if the given number is a Disarium Number.
@@ -703,3 +728,104 @@
 
 # product = math.prod(num for num in numbers)
 # print(product)
+
+# Q51 Write a Python program to find smallest number in a list.
+
+# lst = [12,354,4,545,7,7,435,23545,7567]
+
+# print(min(lst))
+# smallest = lst[0]
+
+# for i in lst:
+#     if i < smallest:
+#         smallest = i
+# print(smallest)
+
+# Q52 Write a Python program to find largest number in a list.
+
+# lst = [12,354,4,545,7,7,435,23545,7567]
+
+# print(max(lst))
+# largest = lst[0]
+
+# for i in lst:
+#     if i > largest:
+#         largest = i
+# print(largest)
+
+# Q53 Write a Python program to find second largest number in a list.
+
+# number = [12,324,5,456,567,43,325,45,74534]
+# number.sort(reverse=True)
+
+# print(number[1])
+
+# def second_largest(nums):
+#     if len(nums) < 2:
+#         return None  # Not enough elements
+
+#     largest = second = float('-inf')  # start with very small numbers
+
+#     for num in nums:
+#         if num > largest:
+#             # update both largest and second
+#             second = largest
+#             largest = num
+#         elif num > second and num != largest:
+#             # update only second largest
+#             second = num
+
+#     return second if second != float('-inf') else None
+
+# # Test
+# list1 = [10, 20, 4, 45, 99]
+# print("Second largest:", second_largest(list1))
+
+# list2 = [5, 5, 5]   # edge case (all same)
+# print("Second largest:", second_largest(list2))
+
+
+# Q54 Write a Python program to find N largest elements from a list
+
+# number = [12,32,5,346,45,756,734,532,4,2356,457,451]
+
+# number.sort(reverse=True)
+
+# N_Largest = int(input("Enter the number :- "))
+
+# if N_Largest > len(number):
+#     print("Element is insuffcient")
+# else:
+#     print(number[N_Largest])
+
+# Q55 Write a Python program to print even numbers in a list.
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# even = [num for num in numbers if numbers%2==0]
+
+# Q56 Write a Python program to print odd numbers in a List.
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# odd = [num for num in numbers if num%2 != 0]
+
+# Q57 Write a Python program to Remove empty List from List.
+# list_of_lists = [[1, 2, 3], [], [4, 5], [], [6, 7, 8], []]
+# filtered = [lst for lst in list_of_lists if lst]
+
+# Q58 Write a Python program to Cloning or Copying a list.
+# original_list = [1, 2, 3, 4, 5]
+# cloned_list = list(original_list)
+# print(cloned_list)
+
+# Q59 Write a Python program to Count occurrences of an element in a list.
+# lst = [1,2,3,213,1,1,1,3,4,5,6,6,6,6,3,3,3,2,2,2]
+# freq = {}
+# for i in lst:
+#     freq[i] = freq.get(i,0)+1
+# print(freq)
+
+# Q60 Write a Python program to find words which are greater than given length k.
+# word_list = ["apple", "banana", "cherry", "date", "elderberry", "dragon"]
+# k = 5
+# result = []
+# for i in word_list:
+#     if len(i)>k:
+#         result.append(i)
