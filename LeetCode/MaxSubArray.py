@@ -1,3 +1,4 @@
+# Maximum Sum Of SubArray
 class Solution:
     def maxSubArray(self , nums: list[int]) -> int:
         maxSub = nums[0]
