@@ -829,3 +829,90 @@
 # for i in word_list:
 #     if len(i)>k:
 #         result.append(i)
+
+# Q61 Write a Python program for removing 𝑖 character from a string.
+
+# str1 = "HelloGuys"
+# i = input(f" ({str1}) Enter the ith value you want to remove from this string :- ")
+# str1 = str1.replace(i , " ")
+# print(str1)
+
+# Q62 Write a Python program to split and join a string.
+# input_str = "Python is a high level programming language"
+# word_list = input_str.split()
+
+# separator = " "
+# result_after_join = separator.join(word_list)
+
+# print("Original :- " , input_str)
+# print("After split :- " , word_list)
+# print("After Join :- " , result_after_join)
+
+# Q63 Write a Python program to check if a given string is binary string or not.
+
+# def check_binary(str):
+#     for i in str:
+#         if i not in "01":
+#             return False
+#     return True
+
+# print(check_binary("01010101sdg"))
+
+# Q64 Write a Python program to find uncommon words from two Strings.
+# def find_uncommon(str1 ,str2):
+#     words1 = set(str1.split())
+#     words2 = set(str2.split())
+
+#     uncommon_words_set = words1.symmetric_difference(words2)
+
+#     uncommon_words_list = list(uncommon_words_set)
+
+#     return uncommon_words_list
+
+# string1 = "This is first string yoyo"
+# string2 = "this is second string honey singh"
+
+# uncommon = find_uncommon(string1 , string2)
+# print(uncommon)
+
+# Q65 Write a Python program to find all duplicate characters in string
+# string1 = "asfuohidg rdnfgdassdf"
+# freq = {}
+# duplicate = []
+
+# for i in string1:
+#     freq[i] = freq.get(i , 0)+1
+
+# for i ,f in freq.items():
+#     if f >= 2:
+#         duplicate.append(i)
+
+# print("Duplicate Characters are :- ")
+# print(duplicate)
+
+# Q66 Write a Python Program to check if a string contains any special character.
+# import re 
+
+# pattern = r'[!@#$%^&*()_+{}\[\]:;<>,.?~\\\/\'"\-=]'
+# my_str = "Hello World!"
+# if re.search(pattern , my_str):
+#     print("Special Character Present")
+# else:
+#     print("Special Character Not Present")
+
+# Q67 Write a Python program to Extract Unique dictionary values
+
+my_dict = {
+ 'a': 10,
+ 'b': 20,
+ 'c': 10,
+ 'd': 30,
+ 'e': 20
+}
+
+unique = set()
+
+for i in my_dict.values():
+    unique.add(i)
+
+print(unique)
