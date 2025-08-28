@@ -902,17 +902,52 @@
 
 # Q67 Write a Python program to Extract Unique dictionary values
 
-my_dict = {
- 'a': 10,
- 'b': 20,
- 'c': 10,
- 'd': 30,
- 'e': 20
-}
+# my_dict = {
+#  'a': 10,
+#  'b': 20,
+#  'c': 10,
+#  'd': 30,
+#  'e': 20
+# }
 
-unique = set()
+# unique = set()
 
-for i in my_dict.values():
-    unique.add(i)
+# for i in my_dict.values():
+#     unique.add(i)
 
-print(unique)
+# print(unique)
+
+# Q68 Write a Python program to find the sum of all items in a dictionary
+
+# my_dict = {
+#  'a': 10,
+#  'b': 20,
+#  'c': 10,
+#  'd': 30,
+#  'e': 20
+# }
+
+# total = 0
+# for i in my_dict.values():
+#     total += i
+
+# print(total)
+
+# Q69 Write a Python program to Merging two Dictionaries.
+# dict1 = {'a': 1, 'b': 2}
+# dict2 = {'c': 3, 'd': 4}
+
+# dict1.update(dict2)
+
+# print(dict1)
+
+# Q70 Write a Python program to convert key-values list to flat dictionary.
+# key_values_list = [('a', 1), ('b', 2), ('c', 3), ('d', 4)]
+
+# flat_dict ={}
+
+# for key,value in key_values_list:
+#     flat_dict[key] = value
+
+# print(flat_dict)
+
