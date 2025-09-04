@@ -951,3 +951,259 @@
 
 # print(flat_dict)
 
+#  Q71 Write a Python program to insertion at the beginning in OrderedDict.
+
+# from collections import OrderedDict
+
+# ordered_dict = OrderedDict([('b', 2), ('c', 3), ('d', 4)])
+
+# new_item = ('a',1)
+
+# new_ordered_dict = OrderedDict([new_item])
+
+# new_ordered_dict.update(ordered_dict)
+
+# print(new_ordered_dict)
+
+# Q72 Write a Python program to check order of character in string using OrderedDict().
+
+# from collections import OrderedDict
+
+# def check_order(string, reference):
+#  # Create OrderedDicts for both strings
+#     string_dict = OrderedDict.fromkeys(string)
+#     reference_dict = OrderedDict.fromkeys(reference)
+
+#     return string_dict == reference_dict
+
+# input_string= "hello world"
+# reference_string = "Helo wrd"
+
+# if check_order(input_string , reference_string):
+#     print("The order are similar")
+
+# else:
+#     print("Order are not similar")
+
+# Q73 Write a Python program to sort Python Dictionaries by Key or Value.
+
+# sample_dict = {'apple': 3, 'banana': 1, 'cherry': 2, 'date': 4}
+# sorted_dict_by_keys = dict(sorted(sample_dict.items()))
+
+# print("Sorted by keys:")
+# for key, value in sorted_dict_by_keys.items():
+#     print(f"{key}: {value}")
+
+
+# Q74 Write a program that calculates and prints the value according to the given formula:
+# Following are the fixed values of C and H:
+# C is 50. H is 30.
+# Q = ((2*C*D)/H)
+# import math
+# # Fixed values
+# C = 50
+# H = 30
+# # Function to calculate Q
+# def calculate_Q(D):
+#     return int(math.sqrt((2 * C * D) / H))
+# # Input comma-separated sequence of D values
+# input_sequence = input("Enter comma-separated values of D: ")
+# D_values = input_sequence.split(',')
+# # Calculate and print Q for each D value
+# result = [calculate_Q(int(D)) for D in D_values]
+# print(','.join(map(str, result)))
+
+
+# Q75 Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional
+# array. The element value in the i-th row and j-th column of the array should be i*j.
+# Suppose the following inputs are given to the program:
+# 3,5
+# Then, the output of the program should be:
+# [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
+
+# X, Y = map(int, input("Enter two digits (X, Y): ").split(','))
+# # Initialize a 2D array filled with zeros
+# array = [[0 for j in range(Y)] for i in range(X)]
+# # Fill the array with values i * j
+# for i in range(X):
+#     for j in range(Y):
+#         array[i][j] = i * j
+
+# for row in array:
+#  print(row)
+
+# Q76 Write a program that accepts a comma separated sequence of words as input and
+# prints the words in a comma-separated sequence after sorting them alphabetically
+
+# input_sentence = input("Enter the words with comma seperateed value: ")
+
+# words = input_sentence.split(',')
+
+# sorted_words = sorted(words)
+
+# sequence_words = ','.join(sorted_words)
+# print(sequence_words)
+
+
+# Q77 Write a program that accepts a sequence of whitespace separated words as input
+# and prints the words after removing all duplicate words and sorting them
+# alphanumerically.
+
+# input_sequence = input("Enter a sequence of whitespace-separated words: ")
+
+# words = set(input_sequence.split())
+
+# sorted_words = sorted(words)
+
+# sentence_sequence = ' '. join(sorted_words)
+# print(sentence_sequence)
+
+# Q79 Write a program that accepts a sentence and calculate the number of letters and
+# digits. Suppose the following input is supplied to the program:
+
+# sentence = input("Enter a sentence that contain Alphabets and Numbers : ")
+
+# letter_count = 0
+# digit_count = 0
+
+# for char in sentence:
+#     if char.isalpha():
+#         letter_count+=1
+#     elif char.isdigit():
+#         digit_count+=1
+    
+# print(letter_count)
+# print(digit_count)
+
+# Q80 A website requires the users to input username and password to register. Write a
+# program to check the validity of password input by users. Following are the criteria
+# for checking the password:
+# 1. At least 1 letter between [a-z]
+# 2. At least 1 number between [0-9]
+# 1. At least 1 letter between [A-Z]
+# 3. At least 1 character from [$#@]
+# 4. Minimum length of transaction password: 6
+# 5. Maximum length of transaction password: 12
+# Your program should accept a sequence of comma separated passwords and will
+# check them according to the above criteria. Passwords that match the criteria are to
+# be printed, each separated by a comma.
+# Example
+# If the following passwords are given as input to the program:
+# ABd1234@1,a F1#,2w3E*,2We3345
+# Then, the output of the program should be:
+# ABd1234@1
+
+# import re
+
+# def is_valid_password(password):
+#     if 6 <= len(password) <= 12:
+#         if re.match(r"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$#@])", password):
+#             return True
+#     return False
+
+# passwords = input("Enter passwords separated by commas: ").split(',')
+# valid_passwords = []
+# for psw in passwords:
+#     if is_valid_password(psw):
+#         valid_passwords.append(psw)
+
+# print(','.join(valid_passwords))
+
+# Q81 Define a class with a generator which can iterate the numbers, which are divisible by
+# 7, between a given range 0 and n.
+
+# class DivisibleBySeven:
+
+#     def __init__(self , n):
+#         self.n = n
+    
+#     def generator_divisible_by_seven(self):
+#         for num in range(self.n+1):
+#             if num%7==0:
+#                 yield num
+# n = int(input("Enter your desired range: "))
+# divisible_by_seven_generator = DivisibleBySeven(n).generate_divisible_by_seven()
+# for num in divisible_by_seven_generator:
+#     print(num)
+
+# Q82 Write a program to compute the frequency of the words from the input. The output
+# should output after sorting the key alphanumerically. Suppose the following input is
+# supplied to the program:
+
+# input string = New to Python or choosing between Python 2 and Python 3? Read Python 2 or
+# Python 3.
+
+# input_sentence = input("Enter a Sentence: - ")
+
+# words = input_sentence.split()
+
+# word_freq = {}
+
+# for word in words:
+
+#     word = word.strip('.,?')
+#     word = word.lower()
+
+#     if word in word_freq:
+#         word_freq[word] +=1
+#     else:
+#         word_freq = 1
+
+# sorted_words = sorted(word_freq.items())
+
+# for word ,frequency in sorted_words:
+#     print(f"{word}:{frequency}")
+
+# Q83 Define a class Person and its two child classes: Male and Female. All classes have a
+# method "getGender" which can print "Male" for Male class and "Female" for Female
+# class
+
+# class Person:
+#     def getGender(self):
+#         print("This is Person Class Get Gender Function")
+
+# class Male(Person):
+#     def getGender(self):
+#         return "Male"
+
+# class Female(Person):
+#     def getGender(self):
+#         return "Female"
+
+
+# print(Person().getGender())
+# print(Male().getGender())
+# print(Female().getGender())
+
+# Q84 Please write a program to generate all sentences where subject is in ["I", "You"] and
+# verb is in ["Play", "Love"] and the object is in ["Hockey","Football"].
+
+# subjects = ["I", "You"]
+# verbs = ["Play", "Love"]
+# objects = ["Hockey", "Football"]
+# sentences = []
+
+# for sbj in subjects:
+#     for vrb in verbs:
+#         for obj in objects:
+#             sentence = f"{sbj} {vrb} {obj}"
+#             sentences.append(sentence)
+
+# for sentence in sentences:
+#     print(sentence)
+
+# Q85 Please write a program to compress and decompress the string "hello world!hello
+# world!hello world!hello world!".
+
+# import zlib 
+
+# string = "hello world!hello world!hello world!hello world!"
+
+# # Compress the string
+# compressed_string = zlib.compress(string.encode())
+# # Decompress the string
+# decompressed_string = zlib.decompress(compressed_string).decode()
+# print("Original String:", string)
+# print("Compressed String:", compressed_string)
+# print("Decompressed String:", decompressed_string)
+
