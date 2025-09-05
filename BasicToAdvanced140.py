@@ -1207,3 +1207,92 @@
 # print("Compressed String:", compressed_string)
 # print("Decompressed String:", decompressed_string)
 
+# Q86 Please write a binary search function which searches an item in a sorted list. The
+# function should return the index of element to be searched in the list.
+# def search(lst , target):
+#     l,r= 0,len(lst)-1
+#     while l <= r:
+#         mid = (l+r) // 2
+
+#         if lst[mid] == target:
+#             return mid
+#         elif lst[mid] < target:
+#             l = mid+1
+#         else: 
+#             r = mid-1
+#     return -1
+# sorted_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# target_element = 4
+# result = search(sorted_list, target_element)
+# if result != -1:
+#  print(f"Element {target_element} found at index {result}")
+# else:
+#  print(f"Element {target_element} not found in the list")
+
+# Q87 Please write a program using generator to print the numbers which can be divisible
+# by 5 and 7 between 0 and n in comma separated form while n is input by console.
+
+# def divisible_by_5_and_7(n):
+#     for num in range(n+1):
+#         if num%5==0 and num%7==0:
+#             yield num
+
+# try:
+#     n = int(input("Enter a value for n : "))
+#     result = divisible_by_5_and_7(n)
+#     print(','.join(map(str,result)))
+# except ValueError:
+#     print("Please enter a valid integer for n.")
+
+# Q88 Please write a program using generator to print the even numbers between 0 and n in
+# comma separated form while n is input by console.
+
+# def even_num(nums):
+#     for num in nums:
+#         if num%2==0:
+#             yield num
+
+# try:
+#     n = int(input("Enter a value for n : "))
+#     result = even_num(n)
+#     print(','.join(map(str,result)))
+# except ValueError:
+#     print("Please enter a valid integer for n.")
+
+
+# Q89 Please write a program using list comprehension to print the Fibonacci Sequence in
+# comma separated form with a given n input by console.
+
+# def fibonacci(n):
+#     sequence = [0, 1] 
+#     [sequence.append(sequence[-1] + sequence[-2]) for _ in range(2, n)]
+#     return sequence
+
+# try:
+#     n = int(input("Enter a value for n : "))
+#     result = fibonacci(n)
+#     print(','.join(map(str,result)))
+# except ValueError:
+#     print("Please enter a valid integer for n.")
+
+
+# Q90 Assuming that we have some email addresses in the
+# "username@companyname.com (mailto:username@companyname.com)" format,
+# please write program to print the user name of a given email address. Both user
+# names and company names are composed of letters only.
+
+def extract_name(email):
+    name = email.split('@')
+
+    if len(email)==2:
+        return name[0]
+    else:
+        print("Invalid Format")
+
+try:
+    n = int(input("Enter a value for n : "))
+    result = extract_name(n)
+    print(','.join(map(str,result)))
+except ValueError:
+    print("Please enter a valid integer for n.")
+
