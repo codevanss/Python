@@ -1281,18 +1281,139 @@
 # please write program to print the user name of a given email address. Both user
 # names and company names are composed of letters only.
 
-def extract_name(email):
-    name = email.split('@')
+# def extract_name(email):
+#     name = email.split('@')
 
-    if len(email)==2:
-        return name[0]
+#     if len(email)==2:
+#         return name[0]
+#     else:
+#         print("Invalid Format")
+
+# try:
+#     n = int(input("Enter a value for n : "))
+#     result = extract_name(n)
+#     print(','.join(map(str,result)))
+# except ValueError:
+#     print("Please enter a valid integer for n.")
+
+# Q91 Define a class named Shape and its subclass Square. The Square class has an init
+# function which takes a length as argument. Both classes have an area function which
+# can print the area of the shape where Shape's area is 0 by default.
+
+# class Shape:
+#     def __init__(self):
+#         pass 
+
+#     def area(self):
+#         return 0
+
+# class Square(Shape):
+#     def __init__(self,length):
+#         super().__init__()
+#         self.l = length
+#     def area(self):
+#         return (self.l)**2
+
+# Q92 Write a function that stutters a word as if someone is struggling to read it. The first
+# two letters are repeated twice with an ellipsis ... and space after each, and then the
+# word is pronounced with a question mark ?.
+# stutter("incredible") ➞ "in... in... incredible?"
+# def stutters(word):
+#     if len(word)<2:
+#         return "Word must be atleast 2 character long"
+#     stutter_word = f"{word[:2]}... {word[:2]}...{word}"
+#     return stutter_word
+
+# Q93 Create a function that takes an angle in radians and returns the corresponding angle
+# in degrees rounded to one decimal place.
+# Examples
+# radians_to_degrees(1) ➞ 57.3
+# radians_to_degrees(20) ➞ 1145.9
+# radians_to_degrees(50) ➞ 2864.8
+
+# import math
+
+# def radians_to_degrees(radians):
+#     degrees = radians * (180/ math.pi)
+#     return round(degrees,1)
+
+# print(radians_to_degrees(1))
+# print(radians_to_degrees(20))
+# print(radians_to_degrees(50))
+
+# Q94 In this challenge, establish if a given integer num is a Curzon number. If 1 plus 2
+# elevated to num is exactly divisible by 1 plus 2 multiplied by num, then num is a
+# Curzon number.
+# Given a non-negative integer num, implement a function that returns True if num is a
+# Curzon number, or False otherwise.
+
+# def is_curzon(num):
+#     if num<0:
+#         return "Enter a positive number"
+#     elif ((2**num)+1)%((2*num)+1)==0:
+#         return f"{num} is a curzon number"
+#     else:
+#         return f"{num} is not a curzon number"
+
+# print(is_curzon(6))
+
+# Q95 Given the side length x find the area of a hexagon.
+# import math 
+
+# def hexagon(length):
+#     area = (3*(math.sqrt(3))* (length**2))/2
+#     return round(area,1)
+
+# Q96 Create a function that returns a base-2 (binary) representation of a base-10 (decimal)
+# string number. To convert is simple: ((2) means base-2 and (10) means base-10)
+# 010101001(2) = 1 + 8 + 32 + 128.
+
+# def binary(decimal):
+#     binary_str = ""
+#     while decimal > 0:
+#         remainder = decimal % 2
+#         binary_str = str(remainder) + binary_str
+#         decimal = decimal // 2
+#     return binary_str if binary_str else "0"
+
+# Q97 Create a function that takes three arguments a, b, c and returns the sum of the
+# numbers that are evenly divided by c from the range a, b inclusive.
+
+# def evenlu_divisible(a,b,c):
+    # total = 0
+    # for num in range(a,b+1):
+    #     if num%c==0:
+    #         total+=num
+    # return total
+
+# Q98 Create a function that returns True if a given inequality expression is correct and
+# False otherwise
+# correct_signs("3 < 7 < 11") ➞ True
+# correct_signs("13 > 44 > 33 <1") ➞ False
+# correct_signs("1 < 2 < 6 < 9 > 3") ➞ True
+
+# def correct_sign(expression):
+#     try:
+#         return eval(expression)
+#     except:
+#         return False
+
+# Q99 Create a function that replaces all the vowels in a string with a specified character.
+# Examples
+# replace_vowels("the aardvark", "#") ➞ "th# ##rdv#rk"
+
+# def replace_vowels(sentence):
+#     vowels = "AEIOUaeiou"
+#     if vowels in sentence:
+#         sentence = sentence.replace(vowels ,"#")
+#     return sentence
+
+
+# Q100 Write a function that calculates the factorial of a number recursively
+
+def factorial(num):
+    if num == 0:
+        return 1
     else:
-        print("Invalid Format")
-
-try:
-    n = int(input("Enter a value for n : "))
-    result = extract_name(n)
-    print(','.join(map(str,result)))
-except ValueError:
-    print("Please enter a valid integer for n.")
-
+        return num*(factorial(num-1))
+    
