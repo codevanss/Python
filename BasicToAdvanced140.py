@@ -1411,9 +1411,9 @@
 
 # Q100 Write a function that calculates the factorial of a number recursively
 
-def factorial(num):
-    if num == 0:
-        return 1
-    else:
-        return num*(factorial(num-1))
+# def factorial(num):
+#     if num == 0:
+#         return 1
+#     else:
+#         return num*(factorial(num-1))
     
