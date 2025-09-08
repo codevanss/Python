@@ -116,25 +116,25 @@
 # print (sampleArray)
 
 # Create two 2-D arrays and Plot them using matplotlib
-import numpy as np
-import matplotlib.pyplot as plt
+# import numpy as np
+# import matplotlib.pyplot as plt
 
-# Create two 2D NumPy arrays
-array1 = np.random.randint(1, 100, (5, 5))  # 5x5 matrix with random values (1-100)
-array2 = np.random.randint(1, 100, (5, 5))  # Another 5x5 matrix
+# # Create two 2D NumPy arrays
+# array1 = np.random.randint(1, 100, (5, 5))  # 5x5 matrix with random values (1-100)
+# array2 = np.random.randint(1, 100, (5, 5))  # Another 5x5 matrix
 
-# Plotting the first array
-plt.subplot(1, 2, 1)  # 1 row, 2 columns, position 1
-plt.imshow(array1, cmap='coolwarm', interpolation='nearest')
-plt.colorbar()  # Add color scale
-plt.title("Array 1 Heatmap")
+# # Plotting the first array
+# plt.subplot(1, 2, 1)  # 1 row, 2 columns, position 1
+# plt.imshow(array1, cmap='coolwarm', interpolation='nearest')
+# plt.colorbar()  # Add color scale
+# plt.title("Array 1 Heatmap")
 
-# Plotting the second array
-plt.subplot(1, 2, 2)  # 1 row, 2 columns, position 2
-plt.imshow(array2, cmap='coolwarm', interpolation='nearest')
-plt.colorbar()  # Add color scale
-plt.title("Array 2 Heatmap")
+# # Plotting the second array
+# plt.subplot(1, 2, 2)  # 1 row, 2 columns, position 2
+# plt.imshow(array2, cmap='coolwarm', interpolation='nearest')
+# plt.colorbar()  # Add color scale
+# plt.title("Array 2 Heatmap")
 
-# Show the plots
-plt.tight_layout()
-plt.show()
+# # Show the plots
+# plt.tight_layout()
+# plt.show()
