@@ -1416,4 +1416,20 @@
 #         return 1
 #     else:
 #         return num*(factorial(num-1))
-    
+
+
+# Q101 Hamming distance is the number of characters that differ between two strings.
+# To illustrate:
+# String1: "abcbba"
+# String2: "abcbda"
+# Hamming Distance: 1 - "b" vs. "d" is the only difference.
+
+def hamming_distance(str1, str2):
+    if len(str1) != len(str2):
+        raise ValueError("Input strings must have the same length")
+    distance = 0
+
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            distance += 1 # Increment the counter for differences
+    return distance
