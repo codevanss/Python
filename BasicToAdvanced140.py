@@ -1424,12 +1424,25 @@
 # String2: "abcbda"
 # Hamming Distance: 1 - "b" vs. "d" is the only difference.
 
-def hamming_distance(str1, str2):
-    if len(str1) != len(str2):
-        raise ValueError("Input strings must have the same length")
-    distance = 0
+# def hamming_distance(str1, str2):
+#     if len(str1) != len(str2):
+#         raise ValueError("Input strings must have the same length")
+#     distance = 0
 
-    for i in range(len(str1)):
-        if str1[i] != str2[i]:
-            distance += 1 # Increment the counter for differences
-    return distance
+#     for i in range(len(str1)):
+#         if str1[i] != str2[i]:
+#             distance += 1 # Increment the counter for differences
+#     return distance
+
+# Q102 Create a function that takes a list of non-negative integers and strings and return a
+# new list without the strings.
+# Examples
+# filter_list([1, 2, "a", "b"]) ➞ [1, 2]
+def filter_list(obj):
+    filtered_list = []
+    if isinstance(obj ,int):
+        filtered_list.append(obj)
+    elif isinstance(obj ,(list,tuple)):
+        for item in obj:
+            filtered_list.extend(filter_list(item))
+    return filtered_list
