@@ -1438,11 +1438,11 @@
 # new list without the strings.
 # Examples
 # filter_list([1, 2, "a", "b"]) ➞ [1, 2]
-def filter_list(obj):
-    filtered_list = []
-    if isinstance(obj ,int):
-        filtered_list.append(obj)
-    elif isinstance(obj ,(list,tuple)):
-        for item in obj:
-            filtered_list.extend(filter_list(item))
-    return filtered_list
+# def filter_list(obj):
+#     filtered_list = []
+#     if isinstance(obj ,int):
+#         filtered_list.append(obj)
+#     elif isinstance(obj ,(list,tuple)):
+#         for item in obj:
+#             filtered_list.extend(filter_list(item))
+#     return filtered_list
