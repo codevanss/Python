@@ -59,12 +59,12 @@
 
 # Check for Equal occurences of 'cat' and 'hat' in a string
 
-# def cat_hat(s):
-#     return s.count("cat") == s.count("hat")
+def cat_hat(s):
+    return s.count("cat") == s.count("hat")
 
-# print(cat_hat("catinhat"))
-# print(cat_hat("berozgar"))
-# print(cat_hat("catbutnotincap"))
+print(cat_hat("catinhat"))
+print(cat_hat("berozgar"))
+print(cat_hat("catbutnotincap"))
 
 # Conditional Booloean Evaluation
 def multiplicationTable(N):
