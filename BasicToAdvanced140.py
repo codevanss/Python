@@ -1446,3 +1446,87 @@
 #         for item in obj:
 #             filtered_list.extend(filter_list(item))
 #     return filtered_list
+
+
+# Q103 The "Reverser" takes a string as input and returns that string in reverse order, with
+# the opposite case. Examples
+# reverse("Hello World") ➞ "DLROw OLLEh"
+
+# def reverser(s):
+#     return (s[ : :-1 ].swapcase())
+
+# Q104 You can assign variables from lists like this:
+# lst = [1, 2, 3, 4, 5, 6]
+# first = lst[0]
+# middle = lst[1:-1]
+# last = lst[-1]
+ 
+# writeyourcodehere = [1, 2, 3, 4, 5, 6]
+# # Unpack the list into variables
+# first, *middle, last = writeyourcodehere
+# print(first)
+# print(middle)
+# print(last)
+
+
+# Q105 Write a function that calculates the factorial of a number recursively.
+# Examples
+# factorial(5) ➞ 120
+
+# def fact(num):
+#     if num == 0:
+#         return 1
+#     return num * fact(num-1)
+
+
+# Q106 Write a function that moves all elements of one type to the end of the list.
+# move_to_end([1, 3, 2, 4, 4, 1], 1) ➞ [3, 2, 4, 4, 1, 1]
+
+# def move_to_end(lst, element):
+#     count = lst.count(element)
+#     lst = [x for x in lst if x != element]
+#     lst.extend([element] * count)
+#     return lst
+
+# Q107 Create a function that takes a string and returns a string in which each character is
+# repeated once
+
+# def double_char(s):
+#     double_str = ""
+
+#     for char in s:
+#         double_str += char*2
+#     return double_str
+
+# Q108 Create a function that reverses a boolean value and returns the string "boolean
+# expected" if another variable type is given.
+# Examples
+# reverse(True) ➞ False
+
+# def reverser(value):
+#     if isinstance(value , bool):
+#         return not value
+#     else:
+#         return "bool expected"
+
+# Q109 Create a function that returns the thickness (in meters) of a piece of paper after
+# folding it n number of times. The paper starts off with a thickness of 0.5mm.
+# Examples
+# num_layers(1) ➞ "0.001m"
+# - Paper folded once is 1mm (equal to 0.001m)
+# num_layers(4) ➞ "0.008m"
+# - Paper folded 4 times is 8mm (equal to 0.008m)
+
+# def num_layers(n):
+#     initial_thickness_mm = 0.5 # Initial thickness in millimeters
+#     final_thickness_mm = initial_thickness_mm * (2 ** n)
+#     final_thickness_m = final_thickness_mm / 1000 # Convert millimeter
+#     return f"{final_thickness_m:.3f}m"
+
+
+# Q110 Create a function that takes a single string as argument and returns an ordered list
+# containing the indices of all capital letters in the string.
+# index_of_caps("eDaBiT") ➞ [1, 3, 5]
+
+# def index_of_caps(word):
+#     return [i for i, char in enumerate(word) if char.upper()]
