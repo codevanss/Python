@@ -1528,5 +1528,5 @@
 # containing the indices of all capital letters in the string.
 # index_of_caps("eDaBiT") ➞ [1, 3, 5]
 
-# def index_of_caps(word):
-#     return [i for i, char in enumerate(word) if char.upper()]
+def index_of_caps(word):
+    return [i for i, char in enumerate(word) if char.upper()]
