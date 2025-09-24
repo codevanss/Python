@@ -1528,5 +1528,14 @@
 # containing the indices of all capital letters in the string.
 # index_of_caps("eDaBiT") ➞ [1, 3, 5]
 
-def index_of_caps(word):
-    return [i for i, char in enumerate(word) if char.upper()]
+# def index_of_caps(word):
+#     return [i for i, char in enumerate(word) if char.upper()]
+
+# Q111 Using list comprehensions, create a function that finds all even numbers from 1 to
+# the given number.
+
+def even_num(nums):
+    even = [x for x in range(1 ,nums+1) if x%2==0]
+    return even
+
+print(even_num(56))
