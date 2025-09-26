@@ -1534,8 +1534,8 @@
 # Q111 Using list comprehensions, create a function that finds all even numbers from 1 to
 # the given number.
 
-def even_num(nums):
-    even = [x for x in range(1 ,nums+1) if x%2==0]
-    return even
+# def even_num(nums):
+#     even = [x for x in range(1 ,nums+1) if x%2==0]
+#     return even
 
-print(even_num(56))
+# print(even_num(56))
