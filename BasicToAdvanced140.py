@@ -1539,3 +1539,182 @@
 #     return even
 
 # print(even_num(56))
+
+# Q112 Create a function that takes a list of strings and integers, and filters out the list so
+# that it returns a list of integers only.
+# Examples
+# filter_list([1, 2, 3, "a", "b", 4]) ➞ [1, 2, 3, 4]
+
+# def filter_list(lst):
+    # return [x for x in lst if isinstance(x,int)]
+
+# Q113 Given a list of numbers, create a function which returns the list but with each
+# element's index in the list added to itself. This means you add 0 to the number at
+# index 0, add 1 to the number at index 1, etc...
+
+# def add_index(lst):
+#     return [i+val for i,val in enumerate(lst)]
+        
+# Q114 Create a function that takes the height and radius of a cone as arguments and returns
+# the volume of the cone rounded to the nearest hundredth. See the resources tab for
+# the formula.
+
+# import math
+# def cone_volume(height, radius):
+#     if radius == 0:
+#         return 0
+#     volume = (1/3) * math.pi * (radius**2) * height
+#     return round(volume, 2)
+
+# Q115 This Triangular Number Sequence is generated from a pattern of dots that form a
+# triangle. The first 5 numbers of the sequence, or dots, are:
+# 1, 3, 6, 10, 15
+# This means that the first triangle has just one dot, the second one has three dots, the
+# third one has 6 dots and so on.
+
+# def triangle(n):
+#     if n < 1:
+#         return 0
+#     return n * (n + 1) // 2
+# print(triangle(5))
+
+# Q116 Create a function that takes a list of numbers between 1 and 10 (excluding one
+# number) and returns the missing number.
+
+# def missing_num(lst):
+#     total_sum = sum(range(1, 11)) 
+#     given_sum = sum(lst)
+#     missing = total_sum - given_sum
+#     return missing
+
+# Q117 Write a function that takes a list and a number as arguments. Add the number to the
+# end of the list, then remove the first element of the list. The function should then
+# return the updated list.
+
+# def next_in_line(lst, num):
+#     if lst:
+#         lst.pop(0) 
+#         lst.append(num) 
+#         return lst
+#     else:
+#         return "No list has been selected"
+
+# Q118 Create the function that takes a list of dictionaries and returns the sum of people's budgets.
+# Examples
+# get_budgets([
+# { 'name': 'John', 'age': 21, 'budget': 23000 },
+# { 'name': 'Steve', 'age': 32, 'budget': 40000 },
+# { 'name': 'Martin', 'age': 16, 'budget': 2700 }
+# ]) ➞ 65700
+
+# def get_budgets(lst):
+#     total_budget = sum(person['budget'] for person in lst)
+#     return total_budget
+
+# Q119 Create a function that takes a string and returns a string with its letters in
+# alphabetical order.
+
+# def sorting(txt):
+#     return "".join(sorted(txt))
+
+# Q120 Create a function that accepts the principal p, the term in years t, the interest rate r,
+# and the number of compounding periods per year n. The function returns the value at
+# the end of term rounded to the nearest cent.
+
+# def compound_interest(p, t, r, n):
+#  #compound interest formula
+#     a = p * (1 + (r / n)) ** (n * t)
+#     return round(a,2)
+
+# Q121 Write a function that takes a list of elements and returns only the integers.
+
+# def return_integer(lst):
+#     return [x for x in range(lst) if isinstance(x,int)]
+
+# Q122 Create a function that takes three parameters where:
+# - x is the start of the range (inclusive).
+# - y is the end of the range (inclusive).
+# - n is the divisor to be checked against.
+
+# def divisible_by_third(x,y,n):
+#     return [i for i in range(x,y+1) if i%n==0]
+
+# Q123 Create a function that takes in two lists and returns True if the second list follows the
+# first list by one element, and False otherwise. In other words, determine if the second
+# list is the first list shifted to the right by 1.
+
+# def simon_says(list1, list2):
+#     return list1[:-1] == list2[1:]
+
+# Q124 A group of friends have decided to start a secret society. The name will be the first
+# letter of each of their names, sorted in alphabetical order. Create a function that takes
+# in a list of names and returns the name of the secret society.
+# Examples
+# society_name(["Adam", "Sarah", "Malcolm"]) ➞ "AMS"
+
+# def society_name(names):
+#     secret_name = ''.join(sorted([name[0] for name in names]))
+#     return secret_name
+
+# Q125 An isogram is a word that has no duplicate letters. Create a function that takes a
+# string and returns either True or False depending on whether or not it's an "isogram"
+
+# def isogram(txt):
+#     word = txt.lower()
+#     unique_letters = set()
+#     for letter in txt:
+#         if letter not in unique_letters:
+#             unique_letters.add(letter)
+#     return unique_letters
+
+# Q126 Create a function that takes a string and returns True or False, depending on whether
+# the characters are in order or not.
+
+# def checkorder(str):
+#     return str == "".join(sorted(str))
+
+# Q127 Create a function that takes a number as an argument and returns True or False
+# depending on whether the number is symmetrical or not. A number is symmetrical
+# when it is the same as its reverse.
+
+# def symmetrical(num):
+#     reverse_num = 0
+#     original = num
+#     while num != 0:
+#         reverse_num = reverse_num*10 + num%10
+#         num = num//10
+#     return reverse_num == num 
+# print(symmetrical(5665))
+
+# Q128 Given a string of numbers separated by a comma and space, return the product of
+# the numbers.
+# Examples
+# multiply_nums("2, 3") ➞ 6
+
+# def multiply_num(nums_str):
+
+#     nums = [int(num) for num in nums_str.split(", ")]
+#     result = 1
+
+#     for num in nums:
+#         result *= num
+#     return result
+
+
+# Q129 Create a function that squares every digit of a number.
+# Examples
+# square_digits(9119) ➞ 811181
+
+# def square_digits(n):
+#     num_str = str(n)
+#     result_str = ""
+#     for digit in num_str:
+#         squared_digit = int(digit) ** 2
+#     result_str += str(squared_digit)
+
+
+# Q130 Create a function that sorts a list and removes all duplicate items from it.
+# def setify(lst):
+#     unique_set = set(sorted(lst))
+
+#     return unique_set
