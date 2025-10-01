@@ -1714,7 +1714,7 @@
 
 
 # Q130 Create a function that sorts a list and removes all duplicate items from it.
-# def setify(lst):
-#     unique_set = set(sorted(lst))
+def setify(lst):
+    unique_set = set(sorted(lst))
 
-#     return unique_set
+    return unique_set
