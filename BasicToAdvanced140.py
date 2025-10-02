@@ -1714,7 +1714,17 @@
 
 
 # Q130 Create a function that sorts a list and removes all duplicate items from it.
-def setify(lst):
-    unique_set = set(sorted(lst))
+# def setify(lst):
+#     unique_set = set(sorted(lst))
 
-    return unique_set
+#     return unique_set
+
+# Q131 Create a function that returns the mean of all digits.
+def mean(n):
+    n_str = str(n)
+    digit_sum = sum(int(digit) for digit in n_str)
+
+    digit_count = len(n_str)
+    digit_mean = digit_sum / digit_count
+
+    return int(digit_mean)
