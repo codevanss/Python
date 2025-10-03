@@ -1720,11 +1720,20 @@
 #     return unique_set
 
 # Q131 Create a function that returns the mean of all digits.
-def mean(n):
-    n_str = str(n)
-    digit_sum = sum(int(digit) for digit in n_str)
+# def mean(n):
+#     n_str = str(n)
+#     digit_sum = sum(int(digit) for digit in n_str)
 
-    digit_count = len(n_str)
-    digit_mean = digit_sum / digit_count
+#     digit_count = len(n_str)
+#     digit_mean = digit_sum / digit_count
 
-    return int(digit_mean)
+#     return int(digit_mean)
+
+#Q132 Create a function that takes an integer and returns a list from 1 to the given number,
+# where:
+# 1. If the number can be divided evenly by 4, amplify it by 10 (i.e. return 10 times the
+# number).
+# 2. If the number cannot be divided evenly by 4, simply return the number.
+
+def amplify(num):
+ return [n * 10 if n % 4 == 0 else n for n in range(1, num + 1)]
