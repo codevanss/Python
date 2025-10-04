@@ -1734,6 +1734,5 @@
 # 1. If the number can be divided evenly by 4, amplify it by 10 (i.e. return 10 times the
 # number).
 # 2. If the number cannot be divided evenly by 4, simply return the number.
-
-def amplify(num):
- return [n * 10 if n % 4 == 0 else n for n in range(1, num + 1)]
+# def amplify(num):
+#  return [n * 10 if n % 4 == 0 else n for n in range(1, num + 1)]
