@@ -1750,3 +1750,85 @@
 #     for num, count in count_dict.items():
 #         if count == 1:
 #             return num
+
+# Q134  Your task is to create a Circle constructor that creates a circle with a radius provided
+# by an argument. The circles constructed must have two getters getArea() (PIr^2) and
+# getPerimeter() (2PI*r) which give both respective areas and perimeter
+# (circumference).
+
+# import math
+# class Circle:
+#     def __init__(self , radius):
+#         self.radius = radius
+    
+#     def getArea(self):
+#         return round(math.pi*self.radius**2)
+
+#     def getPerimeter(self):
+#         return round(2*math.pi*self.radius)
+
+# Q135 Create a function that takes a list of strings and return a list, sorted from shortest to longest.
+
+# def sort_by_length(lst):
+#     return sorted(lst, key=len)
+
+# Q136 Create a function that validates whether three given integers form a Pythagorean
+# triplet. The sum of the squares of the two smallest integers must equal the square of
+# the largest number to be validated.
+
+# def is_triplet(a,b,c):
+#     sorted_numbers = sorted([a,b,c])
+#     return sorted_numbers[0]**2 + sorted_numbers[1]**2 == sorted_numbers[2]**2
+
+# Q137 Create a function that takes three integer arguments (a, b, c) and returns the amount
+# of integers which are of equal value.
+
+# def equal(a, b, c):
+#     if a == b == c:
+#         return 3
+#     elif a == b or b == c or a == c:
+#         return 2
+#     else:
+#         return 0
+
+# Q138 Write a function that converts a dictionary into a list of keys-values tuples
+# def dic_to_lst(input_dictt):
+#     sorted_dict = sorted(input_dictt.items())
+#     result = [(key , value) for key, value in sorted_dictt]
+#     return result
+
+# Q139 Write a function that creates a dictionary with each (key, value) pair being the (lower
+# case, upper case) versions of a letter, respectively
+
+# def convertor(lst):
+#     dictt = {}
+#     for i in lst:
+#         dictt[i] = dictt.get(i , i.upper())
+#     return dictt
+
+# print(convertor(["a","b","c"]))
+
+# Q140 Write a function, that replaces all vowels in a string with a specified vowel.
+# def vow_replace(string, vowel):
+#     vowels = "aeiou"
+#     result = ""
+#     for char in string:
+#         if char in vowels:
+#             result += vowel
+#         else:
+#             result += char
+#     return result
+
+# print(vow_replace("apple_and_banana","u"))
+
+# Q141 Create a function that takes a string as input and capitalizes a letter if its ASCII code
+# is even and returns its lower case version if its ASCII code is odd.
+
+def ascii_capitalize(input_str):
+    result = ""
+    for char in input_str:
+        if ord(char) % 2 == 0:
+            result += char.upper()
+        else:
+            result += char.lower()
+        return result
