@@ -10,3 +10,5 @@ if __name__ == '__main__':
     with open('sample.txt','w') as f:
     f.write('Hello hello world test world') 
     print(word_count('sample.txt'))
+
+# Q2  
