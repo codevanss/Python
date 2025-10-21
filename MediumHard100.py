@@ -11,4 +11,9 @@ if __name__ == '__main__':
     f.write('Hello hello world test world') 
     print(word_count('sample.txt'))
 
-# Q2  
+# Q2  Palindrome Checker
+def is_palindrome(s): 
+    s = ''.join(ch.lower() for ch in s if ch.isalnum()) 
+        return s == s[::-1] 
+if __name__ == '__main__': 
+    print(is_palindrome('A man a plan a canal Panama'))
