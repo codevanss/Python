@@ -19,10 +19,10 @@
 #     print(is_palindrome('A man a plan a canal Panama'))
 
 #Q3 Fibonacci Series
-def fib(n): 
-    if n <= 1: 
-        return n 
-    return fib(n-1) + fib(n-2) 
-if __name__ == '__main__': 
-    n = 10 
-    print([fib(i) for i in range(n)])
+# def fib(n): 
+#     if n <= 1: 
+#         return n 
+#     return fib(n-1) + fib(n-2) 
+# if __name__ == '__main__': 
+#     n = 10 
+#     print([fib(i) for i in range(n)])
