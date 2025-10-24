@@ -26,3 +26,11 @@
 # if __name__ == '__main__': 
 #     n = 10 
 #     print([fib(i) for i in range(n)])
+
+# Q4 Email Validator
+import re 
+def valid_email(email): 
+    return bool(re.match(r'^[\w.-]+@[\w.-]+\.\w+$', email)) 
+
+if __name__ == '__main__': 
+    print(valid_email('test@example.com'))
